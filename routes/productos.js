@@ -1,6 +1,6 @@
 var lista = new Array();
 function agregar_producto(req, res){
-   res.render('views/agregar_producto', {
+   res.render('agregar_producto', {
       lista: lista
    });
 }

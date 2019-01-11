@@ -3,6 +3,7 @@
   "description": "Servidor web de prueba",
   "version": "1.0.0",
   "dependencies": {
+    "ejs": "^2.6.1",
     "express": "^4.16.4"
   }
 }

@@ -1,5 +1,6 @@
 var lista = new Array();
 function agregar_producto(req, res){
+   
    res.render('agregar_producto', {
       lista: lista
    });
@@ -23,6 +24,8 @@ exports.post_agregar_producto = function(req, res){
       precio_dolares: precio_dolares
    })
    agregar_producto(req, res);
+   console.log(lista);
+
 }
 /*
 exports.get_mensaje = function(req, res){

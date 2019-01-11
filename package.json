@@ -1,0 +1,8 @@
+{
+  "name": "server",
+  "description": "Servidor web de prueba",
+  "version": "1.0.0",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}

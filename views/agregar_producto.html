@@ -1,0 +1,35 @@
+<html>
+
+<head>
+    <title></title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+
+<body>
+    <h1>Agregar producto</h1>
+    <form method="post" action="/agregar_producto">
+        <label>Código</label><br>
+        <input type="number" name="codigo">
+        <br>
+        <label>Nombre</label><br>
+        <input type="text" name="nombre">
+        <br>
+        <label>Descripción</label>
+        <br>
+        <textarea cols="40" rows="10" name="descripcion"></textarea>
+        <br>
+        <label>Unidades Disponibles</label><br>
+        <input type="number" name="unidades_disponibles">
+        <br>
+        <label>Precio</label><br>
+        <input type="number" name="precio">
+        <br>
+        <label>Precio en Dolares</label><br>
+        <input type="number" name="precio_dolares">
+        <br>
+        <input type="submit" value="Guardar producto">
+    </form>
+
+</body>
+
+</html>

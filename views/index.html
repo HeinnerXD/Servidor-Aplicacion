@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="UTF-8" />
+<title>HTML Form Login</title>
+
+<link rel="stylesheet" href="./css/bootstrap.css" />
+<link rel="stylesheet" href="./css/style.css" />
+
+</head>
+<body>
+<form action = "connection.php"
+
+<form id="frmLogin">
+	
+	<fieldset>
+		<legend>Autenticación</legend>
+		
+		<div class="control-group">
+			<label for="username" class="control-label">
+				Usuario
+				<input type="text" 
+				 id="username" 
+				 class="input-block-level" />
+				 <span class="help">
+				 	* Por favor ingrese su usuario
+				 </span>
+			</label>
+		</div>
+		
+		<div class="control-group">
+			<label for="password" class="control-label">
+				Contraseña
+				<input type="password" 
+				 id="password"
+				 class="input-block-level" />
+				 <span class="help">
+				 	* Por favor ingrese su contraseña
+				 </span>
+			</label>
+		</div>
+
+		<label for="rememberMe" class="checkbox">
+			<input type="checkbox" id="rememberMe" />
+			Recuerdame
+		</label>
+
+		<input type="submit" 
+		 value="Ingresar" 
+		 class="btn btn-primary" />
+	</fieldset>
+</form>
+
+
+<script src="./js/jquery.js"></script>
+<script src="./js/Cookie.js"></script>
+<script src="./js/Login.js"></script>
+
+
+</body>
+</html>

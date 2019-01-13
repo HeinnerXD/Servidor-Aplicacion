@@ -1,7 +1,10 @@
+
 var express = require('express');
 var routes = require('./routes');
 var productos = require('./routes/productos');
-var search = require('./routes/buscar')
+var search = require('./routes/buscar');
+var base = require('./routes/base');
+var login = require('./routes/login');
 
 var bodyParser = require('body-parser');
 
@@ -20,6 +23,21 @@ app.use(bodyParser.urlencoded({
     extended: true
   }));
   app.use(bodyParser.json());
+
+
+
+app.get('/', login.get_login);
+app.get('/', login.post_login);
+
+app.get('/database', base.get_database);
+app.get('/database', base.post_database);
+
+app.get('/buscar_producto', search.get_producto);
+app.post('/buscar_producto', search.post_producto);
+
+app.get('/agregar_producto', productos.get_agregar_producto);
+app.post('/agregar_producto', productos.post_agregar_producto);
+
 /*
 app.set('port', process.env.PORT || 3000);
 app.set('views', path.join(__dirname, 'views'));
@@ -35,17 +53,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 /*if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }*/
- 
-app.get('/', function(req, res){
-  res.send('Servidor Web');
-});
-
-app.get('/buscar_producto', search.get_producto);
-app.post('/buscar_producto', search.post_producto);
-
-app.get('/agregar_producto', productos.get_agregar_producto);
-app.post('/agregar_producto', productos.post_agregar_producto);
-
+/*
 Request.get("https://api.exchangeratesapi.io", (error, response, body) => {
     if(error) {
         return console.dir(error);

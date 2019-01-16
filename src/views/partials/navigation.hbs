@@ -1,0 +1,28 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container">
+    <a class="navbar-brand" href="#">SPEEDWAY</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+      aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        {{#if user}}
+        <li class="nav-item active">
+          <a class="dropdown-item" href="/links">Todos los productos</a>
+        </li>
+        <li class="nav-item">
+          <a class="dropdown-item" href="/links/add">Agregar un nuevo producto</a>
+        </li>
+        <form class="form-inline my-2 my-lg-0" action="/links/search" method="POST">
+          <input class="form-control mr-sm-2" type="search" name="buscar" placeholder="Buscar Producto" aria-label="Search">
+          <button  class="btn btn-primary">Buscar</button>
+        </form>
+        <li class="nav-item">
+          <a href="/logout" class="nav-link">Cerrar Sesion</a>
+        </li>
+        {{/if}}
+      </ul>
+    </div>
+  </div>
+</nav>
